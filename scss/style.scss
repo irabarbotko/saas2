@@ -1,0 +1,65 @@
+//comment
+@import "variables";
+@import "mixin";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@include link(black, red, blue, green);
+
+#grid {
+  float: left;
+  width: 100%;
+
+  > div {
+    @include grid(4, 2%);
+  }
+}
+
+.block:not(.first) {
+  @include padd(20px 40px 30px 50px);
+  background: $bgColor;
+  height: 200px;
+  margin-bottom: 20px;
+  width: $blockWidht;
+  border: $border;
+}
+
+#central_block {
+  padding: 30px;
+
+  ul {
+    list-style: none;
+    display: inline-block;
+  }
+
+  li {
+    float: left;
+    width: (100% / 3);
+    // margin-right: 10px;
+
+    a {
+      @include font($fontW: bold, $color: blue);
+      //   color: blue;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  a {
+    @include font($color, light);
+    // color: $color;
+  }
+}
+
+.first {
+  background: $bgColor;
+  height: 100px;
+  margin-bottom: 20px;
+  width: $blockWidht;
+  border: $border;
+}
