@@ -24,7 +24,7 @@ a:active {
   color: blue;
 }
 .header a:visited {
-  color: #fafafa;
+  color: red;
 }
 
 #grid {
