@@ -1,6 +1,6 @@
 //comment
 @import "variables";
-@import "mixin";
+@import "mixins";
 
 * {
   padding: 0;
@@ -14,6 +14,7 @@
   width: 100%;
 
   > div {
+    
     @include grid(4, 2%);
   }
 }
